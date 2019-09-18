@@ -33,24 +33,21 @@ def Jacobi(mx, mr, n, c):
         return False
 
 
-# n = int(input("请输入矩阵维度n: "))
-# print("请输入系数矩阵：")
-# a = zeros((n,n))
-# for i in range(n):
-#     for j in range(n):
-#           a[i][j] = int(input())
-# print("请输入值向量：")
-# b = zeros((n,1))
-# for k in range(n):
-#     b[k][0] = int(input())
-#
-# print(Jacobi(a, b, 100, 0.00001))
+n = int(input("请输入矩阵维度n: "))
+print("请输入系数矩阵：")
+mx = zeros((n,n))
+for i in range(n):
+    for j in range(n):
+          mx[i][j] = int(input())
+print("请输入值向量：")
+mr = zeros((n,1))
+for k in range(n):
+    mr[k][0] = int(input())
 
 # mx = [[8,-3,2],[4,11,-1],[6,3,12]]
 # mr = [[20],[33],[36]]
 
-mx = [[4, -1, 0, -1, 0, 0], [-1, 4, -1, 0, -1, 0], [0, -1, 4, -1, 0, -1], [-1, 0, -1, 4, -1, 0], [0, -1, 0, -1, 4, -1], [0, 0, -1, 0, -1, 4]]
-
-mr = [[0], [5], [-2], [5], [-2], [6]]
-
+# 测试数据
+# mx = [[4, -1, 0, -1, 0, 0], [-1, 4, -1, 0, -1, 0], [0, -1, 4, -1, 0, -1], [-1, 0, -1, 4, -1, 0], [0, -1, 0, -1, 4, -1], [0, 0, -1, 0, -1, 4]]
+# mr = [[0], [5], [-2], [5], [-2], [6]]
 print(Jacobi(mx, mr, 100, 0.00001))
